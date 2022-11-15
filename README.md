@@ -23,7 +23,7 @@ A shell does three main things in its lifetime.
     • #### Terminate: After its commands are executed, the shell executes any shutdown
     commands, frees up any memory, and terminates
 
-**List of allowed functions and system calls:**
+### List of allowed functions and system calls:
 
     access (man 2 access)
     chdir (man 2 chdir)
@@ -60,8 +60,9 @@ A shell does three main things in its lifetime.
 
 # GCC Compilation Command
 
-`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+    `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
 
-Authors Contact Info:
+## Authors Contact Info:
+
 Git: [Harley Otomofa](https://github.com/HarleyOtos), [Smart Obimba](https://github.com/obimbasmart)
