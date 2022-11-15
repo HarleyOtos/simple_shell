@@ -60,7 +60,7 @@ A shell does three main things in its lifetime.
 
 # GCC Compilation Command
 
-    `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+    gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 
 ## Authors Contact Info:
