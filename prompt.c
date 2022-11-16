@@ -23,17 +23,17 @@ void prompt(void)
 		{
 			while (*environ != NULL)
 			{
-				if (!(_cmpdir(*environ, "USER")) ||
-						!(_cmpdir(*environ, "LANGUAGE")) ||
-						!(_cmpdir(*environ, "SESSION")) ||
-						!(_cmpdir(*environ, "COMPIZ_CONFIG_PROFILE")) ||
-						!(_cmpdir(*environ, "SHLV")) ||
-						!(_cmpdir(*environ, "HOME")) ||
-						!(_cmpdir(*environ, "C_IS")) ||
-						!(_cmpdir(*environ, "DESKTOP_SESSION")) ||
-						!(_cmpdir(*environ, "LOGNAME")) ||
-						!(_cmpdir(*environ, "TERM")) ||
-						!(_cmpdir(*environ, "PATH")))
+				if (!(_strcmpdir(*environ, "USER")) ||
+						!(_strcmpdir(*environ, "LANGUAGE")) ||
+						!(_strcmpdir(*environ, "SESSION")) ||
+						!(_strcmpdir(*environ, "COMPIZ_CONFIG_PROFILE")) ||
+						!(_strcmpdir(*environ, "SHLV")) ||
+						!(_strcmpdir(*environ, "HOME")) ||
+						!(_strcmpdir(*environ, "C_IS")) ||
+						!(_strcmpdir(*environ, "DESKTOP_SESSION")) ||
+						!(_strcmpdir(*environ, "LOGNAME")) ||
+						!(_strcmpdir(*environ, "TERM")) ||
+						!(_strcmpdir(*environ, "PATH")))
 				{
 					place(*environ), place("\n"); }
 				environ++; }}

@@ -22,7 +22,7 @@ void place(char *str);
 char *findfile(char *command);
 char *find_cmd(char *command);
 int compare(char *s1, char *s2);
-int _cmpdir(char *s1, char *s2);
+int _strcmpdir(char *s1, char *s2);
 int charput(char c);
 void place(char *str);
 char *str_concat(char *s1, char *s2);

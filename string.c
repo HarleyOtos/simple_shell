@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _cmpdir - strings compare to find dir.
+ * _strcmpdir - strings compare to find dir.
  *
  * @s1: first string.
  * @s2: second string.
  *
  * Return: if match and any other number else otherwise.
  */
-int _cmpdir(char *s1, char *s2)
+int _strcmpdir(char *s1, char *s2)
 {
 	int i = 0;
 
