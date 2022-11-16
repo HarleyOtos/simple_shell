@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * main - a function with infinite loop
- * @argc: void not use
- * @argv: void not use
+ * main - function with infinite loop
+ * @ac: void not use
+ * @av: void not use
  * Return: loop.
  */
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-	(void)argv;
-	(void)argc;
+	(void)av;
+	(void)ac;
 
 	signal(SIGINT, ctrlC);
 	prompt();
