@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	(void)argv;
 	(void)argc;
 
-	signal(SIGINT, controlC);
+	signal(SIGINT, ctrlC);
 	prompt();
 	return (0);
 }
