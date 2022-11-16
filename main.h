@@ -32,5 +32,5 @@ int compareEnv(char *s1, char *s2);
 void execute_proc(char **cmd);
 char **id_string(char *par);
 void ctrlC(int sig);
-
+int main(int ac, char **av);
 #endif
