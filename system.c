@@ -66,10 +66,10 @@ int compareEnv(char *s1, char *s2)
 
 /**
  * id_string - identyfy keyboard input.
- * @par: call prompt from another function (prompt)
+ * @parameter: call prompt from another function (prompt)
  * Return: str
- **/
-char **id_string(char *par)
+ */
+char **id_string(char *parameter)
 {
 	char **buf = malloc(1024 * sizeof(char *));
 	char *split;
@@ -77,7 +77,7 @@ char **id_string(char *par)
 	char *delim = " \t\n";
 
 
-	split = strtok(par, delim);
+	split = strtok(parameter, delim);
 
 	while (split != NULL)
 	{

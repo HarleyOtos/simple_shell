@@ -30,8 +30,7 @@ int findslash(char *cmd);
 int compareExit(char *s1, char *s2);
 int compareEnv(char *s1, char *s2);
 void execute_proc(char **cmd);
-char **id_string(char *par);
+char **id_string(char *parameter);
 void ctrlC(int sig);
-int main(int ac, char **av);
 
 #endif
