@@ -44,5 +44,4 @@ void prompt(void)
 			id_string(text);
 		else
 			wait(&status);
-	}
-}
+	}}
