@@ -15,7 +15,7 @@ int lsh_execute(char **args)
 	}
 	for (i = 0; i < lsh_num_builtins(); i++)
 	{
-		if (strcmp(args[0], builtin_st[i]) == 0)
+		if (strcmp(args[0], sh_builtin[i]) == 0)
 		{
 			return ((*builtin_func[i])(args));
 		}
