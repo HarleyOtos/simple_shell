@@ -12,7 +12,7 @@
 #define LSH_TOK_DELIM " \t\r\n\a"
 #define LSH_RL_BUFSIZE 1024
 
-int main(int argc, char **argv);
+int main(int ac, char **av);
 void lsh_loop(void);
 int lsh_cd(char **args);
 int lsh_help(char **args);
