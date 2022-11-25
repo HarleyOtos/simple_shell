@@ -3,33 +3,23 @@
 
 #include <sys/wait.h>
 #include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 #include <unistd.h>
-#include <dirent.h>
-#include <limits.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
-extern char **environ;
+#define LSH_TOK_BUFSIZE 64
+#define LSH_TOK_DELIM " \t\r\n\a"
+#define LSH_RL_BUFSIZE 1024
 
-char *show_input(void);
-void prompt(void);
-char *_strcat(char *src);
-int _strlen(char *str);
-void place(char *str);
-char *findfile(char *command);
-char *find_command(char *command);
-int compare(char *s1, char *s2);
-int _strcmpdir(char *s1, char *s2);
-int charput(char c);
-void place(char *str);
-char *str_concat(char *s1, char *s2);
-int lookforslash(char *cmd);
-int compareExit(char *s1, char *s2);
-int compareEnv(char *s1, char *s2);
-void execute_proc(char **cmd);
-char **identify_string(char *parameter);
-void controlC(int sig);
+int main(int argc, char **argv);
+void lsh_loop(void);
+int lsh_cd(char **args);
+int lsh_help(char **args);
+int lsh_exit(char **args);
+char **lsh_split_line(char *line);
+int lsh_execute(char **args);
+int lsh_launch(char **args);
+char *lsh_read_line(void);
+
 #endif
