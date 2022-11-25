@@ -4,7 +4,7 @@
  * lsh_num_builtins - List of builtin commands, followed
  * by their corresponding functions.
  */
-char *builtin_str[] = {
+char *builtin_st[] = {
 	"cd",
 	"help",
 	"exit"
@@ -18,7 +18,7 @@ int (*builtin_func[]) (char **) = {
 
 int lsh_num_builtins(void)
 {
-	return (sizeof(builtin_str) / sizeof(char *));
+	return (sizeof(builtin_st) / sizeof(char *));
 }
 
 /**
@@ -57,7 +57,7 @@ int lsh_help(char **args)
 
 	for (i = 0; i < lsh_num_builtins(); i++)
 	{
-		printf("  %s\n", builtin_str[i]);
+		printf("  %s\n", builtin_st[i]);
 	}
 	printf("Use the man command for information on other programs.\n");
 	return (1);

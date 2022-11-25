@@ -22,4 +22,9 @@ int lsh_execute(char **args);
 int lsh_launch(char **args);
 char *lsh_read_line(void);
 
+char *builtin_st[];
+int (*builtin_func[]) (char **);
+int lsh_num_builtins(void);
+
+
 #endif
