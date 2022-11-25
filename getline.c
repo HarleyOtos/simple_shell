@@ -7,16 +7,20 @@
  */
 char *lsh_read_line(void)
 {
-    char *line = NULL;
-    ssize_t buffsize = 0;
+	char *line = NULL;
+	ssize_t buffsize = 0;
 
-    if (getline(&line, &buffsize, stdin) == -1){
-        if (feof(stdin)) {
-            exit(EXIT_SUCCESS);
-        } else {
-        perror("readline");
-        exit(EXIT_FAILURE);
-        }
-    }
-    return line;
+	if (getline(&line, &buffsize, stdin) == -1)
+	{
+		if (feof(stdin))
+		{
+			exit(EXIT_SUCCESS);
+		}
+		else
+		{
+			perror("readline");
+			exit(EXIT_FAILURE);
+		}
+	}
+	return (line);
 }

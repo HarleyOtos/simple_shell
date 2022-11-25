@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-  lsh_loop();
+	lsh_loop();
 
-  return EXIT_SUCCESS;
+	return (EXIT_SUCCESS);
 }
