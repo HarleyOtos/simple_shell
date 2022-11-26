@@ -3,6 +3,7 @@
 /**
  * lsh_num_builtins - List of builtin commands, followed
  * by their corresponding functions.
+ * @newBuilt: the command value
  */
 
 int lsh_num_builtins(void)
