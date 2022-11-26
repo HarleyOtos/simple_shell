@@ -22,8 +22,8 @@ int lsh_execute(char **args);
 int lsh_launch(char **args);
 char *lsh_read_line(void);
 
-char *newBuilt[] = {"cd", "help", "exit"};
-int (*builtin_func[]) (char **) = {&lsh_cd, &lsh_help, &lsh_exit};
+char *newBuilt[];
+int (*builtin_func[]) (char **);
 int lsh_num_builtins(void);
 
 

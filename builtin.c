@@ -5,9 +5,9 @@
  * by their corresponding functions.
  */
 char *newBuilt[] = {
-	"cd",
-	"help",
-	"exit"
+	"go",
+	"find",
+	"leave"
 };
 
 int (*builtin_func[]) (char **) = {
