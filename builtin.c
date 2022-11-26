@@ -10,6 +10,10 @@ char *newBuilt[] = {
 	"leave"
 };
 
+/**
+ * builtin_func - a command helper
+ */
+
 int (*builtin_func[]) (char **) = {
 	&lsh_cd,
 	&lsh_help,
