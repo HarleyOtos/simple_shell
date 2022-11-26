@@ -1,40 +1,48 @@
 #include "main.h"
 
 /**
- * main - evaluate if there is a input and proccess an output
- * @argc: don't used
- * @argv: arguments to proccess
- * @envp: array whit enviroment
+ * prompt - a call for prompt from another function (prompt)
  *
- * Return: always 0
- */
-
-int main(int argc, char **argv, char **envp)
+ **/
+void prompt(void)
 {
-	char *buffer = NULL;
-	size_t buffer_size = 0;
-	ssize_t prints = 1;
-	int count = 0;
-
-	(void)argc;
-	(void)argv;
-
-	while (prints > 0)
+	for (;;)
 	{
-		signal(SIGINT, sig_handler);
-		if (isatty(STDIN_FILENO))
-			write(STDOUT_FILENO, "($) ", 4);
-		prints = getline(&buffer, &buffer_size, stdin);
-		if (prints == -1)
+		char *text = NULL, **environ;
+		pid_t child_pid;
+		int status, lenbuf;
+		size_t bufsize = 0;
+
+		place("$ ");
+		lenbuf = getline(&text, &bufsize, stdin);
+		if (lenbuf == -1)
+			exit(98);
+		if (compareExit(text, "exit") == 0)
+			exit(0);
+		if (compareEnv(text, "env") == 0)
 		{
-			if (isatty(STDIN_FILENO))
-				write(STDOUT_FILENO, "\n", 1);
-			break;
-		}
-		count = words_in_string(buffer);
-		if (count > 0)
-			index_function(buffer, envp);
+			while (*environ != NULL)
+			{
+				if (!(_cmpdir(*environ, "USER")) ||
+						!(_cmpdir(*environ, "LANGUAGE")) ||
+						!(_cmpdir(*environ, "SESSION")) ||
+						!(_cmpdir(*environ, "COMPIZ_CONFIG_PROFILE")) ||
+						!(_cmpdir(*environ, "SHLV")) ||
+						!(_cmpdir(*environ, "HOME")) ||
+						!(_cmpdir(*environ, "C_IS")) ||
+						!(_cmpdir(*environ, "DESKTOP_SESSION")) ||
+						!(_cmpdir(*environ, "LOGNAME")) ||
+						!(_cmpdir(*environ, "TERM")) ||
+						!(_cmpdir(*environ, "PATH")))
+				{
+					place(*environ), place("\n"); }
+				environ++; }}
+		child_pid = fork();
+		if (child_pid < 0)
+			perror("Error");
+		if (child_pid == 0)
+			id_string(text);
+		else
+			wait(&status);
 	}
-	free(buffer);
-	return (0);
 }
