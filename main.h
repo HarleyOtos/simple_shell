@@ -14,6 +14,7 @@
 
 extern char **environ;
 
+int main(int ac, char **av);
 char *show_input(void);
 void prompt(void);
 char *_strcat(char *src);
