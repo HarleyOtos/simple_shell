@@ -6,12 +6,6 @@
  */
 char *newBuilt[] = { NULL };
 
-int (*builtin_func[]) (char **) = { NULL,
-	&lsh_cd,
-	&lsh_help,
-	&lsh_exit, NULL
-};
-
 int lsh_num_builtins(void)
 {
 	return (sizeof(newBuilt) / sizeof(char *));
