@@ -4,11 +4,7 @@
  * lsh_num_builtins - List of builtin commands, followed
  * by their corresponding functions.
  */
-char *newBuilt[] = { NULL,
-	"go",
-	"find",
-	"leave", NULL
-};
+char *newBuilt[] = { NULL };
 
 int (*builtin_func[]) (char **) = { NULL,
 	&lsh_cd,
